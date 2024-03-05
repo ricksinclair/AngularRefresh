@@ -1,10 +1,10 @@
 
-<app-header/>
+<app-header (sendMode)="setViewMode($event)"/>
 <div class="container ">
   <div class="row">
     <div class="col-md-12">
-        <app-recipes></app-recipes>
-        <app-shopping-list></app-shopping-list>
+        <app-recipes *ngIf="viewMode == 'Recipes'"></app-recipes>
+        <app-shopping-list *ngIf="viewMode == 'ShoppingList'"></app-shopping-list>
 <!--      <app-exercises></app-exercises>-->
     </div>
   </div>

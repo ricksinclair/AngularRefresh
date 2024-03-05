@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularRefresh';
+
+  viewMode = ''
+
+
+  setViewMode(viewMode:string){
+    this.viewMode = viewMode
+  }
+
+
 }
