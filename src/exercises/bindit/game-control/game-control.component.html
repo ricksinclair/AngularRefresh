@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="col-xs-12">
+    <button (click)="startGame()">Start</button>
+    <button (click)="endGame()">Stop</button>
+    <div *ngFor="let value of values">
+      <app-odd *ngIf="value %2 != 0" [value]="value"></app-odd>
+      <app-even *ngIf="value % 2 === 0" [value]="value"></app-even>
+    </div>
+  </div>
+</div>
